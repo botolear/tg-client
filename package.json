@@ -1,6 +1,6 @@
 {
     "name": "@botol/tg-client",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
     "main": "build/index.js",
     "scripts": {
@@ -9,7 +9,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@botol/tg-types": "^0.0.1",
+        "@botol/tg-types": "^0.x",
         "abort-controller": "^3.0.0",
         "form-data": "^4.0.0",
         "node-fetch": "^2.6.1"

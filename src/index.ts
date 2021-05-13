@@ -119,6 +119,9 @@ export class TgClient {
         if (json?.ok !== true) {
             throw new Error(json);
         }
+        if ('result' in json) {
+            return json['result'];
+        }
         return json;
     }
 }
