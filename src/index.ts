@@ -108,7 +108,11 @@ export class TgClient {
     async makeRequest(command: string, params: { [key: number]: any } = {}) {
         let form = new FormData();
         for (let key in params) {
-            form.append(key, params[key]);
+            let val = params[key];
+            if (typeof val === 'object' && val !== null) {
+                val = JSON.stringify(val);
+            }
+            form.append(key, val);
         }
 
         let response = await fetch(this.getApiServer(this.token, command), {
