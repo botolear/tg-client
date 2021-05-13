@@ -1,0 +1,6 @@
+/.npmrc
+/.gitignore
+/node_modules
+/src
+/yarn.lock
+/.prettierrc
