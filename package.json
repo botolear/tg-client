@@ -1,13 +1,27 @@
 {
     "name": "@botol/tg-client",
-    "version": "0.0.5",
+    "version": "0.0.8",
     "description": "",
     "main": "build/index.js",
+    "author": {
+        "name": "le-ar",
+        "url": "https://github.com/le-ar/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/botolear/tg-client"
+    },
+    "keywords": [
+        "dipo",
+        "composer",
+        "telegram",
+        "tg",
+        "bot"
+    ],
     "scripts": {
         "dev": "tsc && node ./build/index.js",
         "prepublish": "tsc"
     },
-    "author": "",
     "license": "ISC",
     "dependencies": {
         "@botol/tg-types": "^0.x",
