@@ -109,7 +109,15 @@ export class TgClient {
         let form = new FormData();
         for (let key in params) {
             let val = params[key];
-            if (typeof val === 'object' && val !== null) {
+            if (typeof val === 'undefined') {
+                continue;
+            }
+
+            if (
+                !(val instanceof Buffer) &&
+                !(val instanceof Uint8Array) &&
+                typeof val !== 'string'
+            ) {
                 val = JSON.stringify(val);
             }
             form.append(key, val);
